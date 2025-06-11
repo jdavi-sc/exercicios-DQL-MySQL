@@ -107,3 +107,35 @@ GROUP BY curso
 HAVING COUNT(*) > 5;
 
 /*Exercício 06*/
+
+SELECT alunos.nome AS NOME, turmas.nome_turma AS TURMA
+FROM 
+	alunos
+INNER JOIN
+	matriculas
+ON
+	matriculas.id_aluno = alunos.id
+INNER JOIN
+	turmas
+ON
+	matriculas.id_turma = turmas.id;
+
+/*Exercício 07*/
+
+/*Exercício 08*/
+
+/*Exercício 09*/
+
+SELECT COUNT(id_aluno) AS TOTAL_MATRICULAS
+FROM matriculas;
+
+/*Exercício 10*/
+
+SELECT AVG(idade)
+FROM alunos;
+
+SELECT MIN(idade)
+FROM alunos;
+
+SELECT MAX(idade)
+FROM alunos;
